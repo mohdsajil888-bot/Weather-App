@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    color: #222;
+    transition: 0.3s;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+header h1 {
+    font-size: 28px;
+}
+
+
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+/* Loading */
+
+#loading {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+
+/* Error */
+
+#errorMsg {
+    display: none;
+    background: #ffdddd;
+    color: red;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+
+/* Weather Card */
+
+.weather-card {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.weather-card img {
+    width: 100px;
+}
+
+
+.weather-card h3 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+
+.weather-card p {
+    margin: 8px;
+}
+
+
+/* Forecast */
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+
+.forecast-card {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.forecast-card img {
+    width: 60px;
+}
+
+
+/* Favorites */
+
+.favorites {
+    margin-top: 30px;
+}
+
+
+.favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+
+.remove-btn {
+    background: red;
+}
+
+
+/* Dark Mode */
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+
+.dark .weather-card,
+.dark .forecast-card,
+.dark .favorite-item {
+    background: #222;
+}
+
+
+.dark .search-box input {
+    background: #222;
+    color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+    }
+
+
+    .forecast {
+        grid-template-columns: 1fr;
+    }
+
+
+    .favorite-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
